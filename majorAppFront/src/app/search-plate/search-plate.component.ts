@@ -18,7 +18,6 @@ export class SearchPlateComponent {
     const sData = {
       'numplate' : this.plateNumber
     }
-    this.api_conn.postNumPlate(sData).subscribe()
-    alert("Submited! " +this.plateNumber )
+    this.api_conn.postNumPlate(sData).subscribe();
   }
 }
