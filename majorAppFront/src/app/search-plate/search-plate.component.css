@@ -13,7 +13,7 @@
 }
 
 .submitBtn{
-    background-color: rgb(82, 145, 82);
+    background-color: rgb(138, 125, 85);
     width: 100px;
     height: 40px;
     border: none;
@@ -33,4 +33,5 @@
     height: 40px;
     border: 1px solid black;
     background-color: aliceblue;
+    font-size: large;
 }

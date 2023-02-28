@@ -1,6 +1,7 @@
-import { NONE_TYPE } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
 
+import { Component} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ApiConnectService } from '../api-connect.service';
 @Component({
   selector: 'app-search-plate',
   templateUrl: './search-plate.component.html',
@@ -9,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class SearchPlateComponent {
   plateNumber: string = '';
 
+  constructor(private api_conn: ApiConnectService,private http: HttpClient){
+
+  }
   OnSubmit(): void{
-    alert("Submited!")
+    
+    const sData = {
+      'numplate' : this.plateNumber
+    }
+    this.api_conn.postNumPlate(sData).subscribe()
+    alert("Submited! " +this.plateNumber )
   }
 }
