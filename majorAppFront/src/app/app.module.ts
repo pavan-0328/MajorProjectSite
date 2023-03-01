@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchPlateComponent } from './search-plate/search-plate.component';
+import { MapPageComponent } from './map-page/map-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchPlateComponent
+    SearchPlateComponent,
+    MapPageComponent
   ],
   imports: [
     BrowserModule,

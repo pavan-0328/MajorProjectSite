@@ -7,12 +7,6 @@ const app  = express();
 app.use(cors());
 app.use(body_parser.json());
 
-app.get('/api/numPlate',(req,res)=>{
-    res.json({
-        'name': 'pavan',
-    });
-})
-
 
 app.post('/api/sNumPlate',(req,res)=>{
     const formData = req.body;

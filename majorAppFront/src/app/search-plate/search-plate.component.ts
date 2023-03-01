@@ -2,6 +2,8 @@
 import { Component} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiConnectService } from '../api-connect.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-search-plate',
   templateUrl: './search-plate.component.html',
@@ -10,7 +12,7 @@ import { ApiConnectService } from '../api-connect.service';
 export class SearchPlateComponent {
   plateNumber: string = '';
 
-  constructor(private api_conn: ApiConnectService,private http: HttpClient){
+  constructor(private api_conn: ApiConnectService,private http: HttpClient,private router: Router){
 
   }
   OnSubmit(): void{
@@ -19,5 +21,8 @@ export class SearchPlateComponent {
       'numplate' : this.plateNumber
     }
     this.api_conn.postNumPlate(sData).subscribe();
+    this.router.navigate(['/map-page'],{
+      queryParams: sData
+    });
   }
 }

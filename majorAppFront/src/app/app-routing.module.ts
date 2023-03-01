@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MapPageComponent } from './map-page/map-page.component';
 import { SearchPlateComponent } from './search-plate/search-plate.component';
 
 const routes: Routes = [{
-  path: "searchPlate", component: SearchPlateComponent
-}];
+  path: "searchPlate", component: SearchPlateComponent,
+  
+},
+{path: "map-page",component: MapPageComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
